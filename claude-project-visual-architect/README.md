@@ -1,97 +1,112 @@
-# VISUAL ARCHITECT — Claude Project Setup Guide
+# CLIP HUNTER — Universal Video Essay Sourcing Project
 
-A pro-level Claude Project that transforms video essay scripts into paragraph-by-paragraph visual sourcing plans with editor-grade YouTube search terms, Google Image queries, canonical scene references, and fallback strategies.
+A cross-platform AI project that turns any video essay script into lean, URL-first, paragraph-by-paragraph visual sourcing output — with exact YouTube timestamps wherever the platform's web search can verify them.
 
-Built to replace generic Gemini Gem setups that produce inaccurate or shallow results.
+Works on **Claude Projects, ChatGPT Custom GPTs, Gemini Gems, and Grok Projects**. Same instructions, same knowledge files, same output format.
 
----
-
-## WHAT THIS PROJECT DOES
-
-Feed it a video essay script. It will:
-
-1. **Deep-analyze the script** — thesis, emotional arc, vibe, aesthetic prescription, confidence audit
-2. **Wait for your signal** — only breaks down sections you explicitly send
-3. **Paragraph-level visual breakdown** — for every paragraph:
-   - Emotional function of the paragraph
-   - Full visual direction (camera, pacing, typography, audio cues)
-   - Primary real-footage source (with canonical references where possible)
-   - 4+ YouTube search terms, editor-grade
-   - Google Image search terms
-   - Stock/motion-graphics fallbacks
-   - AI generation fallback (only when justified)
-   - Sourcing confidence rating
+Covers every niche: Hollywood, classic cinema, TV, anime, cartoons, games, documentaries, history, true crime, finance, sci-fi, sports, internet culture.
 
 ---
 
-## SETUP STEPS
+## WHAT IT DOES
 
-### Step 1 — Create a new Claude Project
-Go to claude.ai → Projects → Create Project. Name it "Visual Architect" or similar.
+For every line of your script, it returns:
 
-### Step 2 — Paste Project Instructions
-Copy the entire contents of `PROJECT_INSTRUCTIONS.md` into the Project's "Custom instructions" / "Project instructions" field.
+1. **Clip description** — what footage to crop (1 sentence)
+2. **YouTube URL + timestamp** (when web search is available) OR canonical scene reference + search query
+3. **Google Image search query** — for stills and quote cards
+4. **Stock fallback** — only when real footage is impossible
+5. **Low-confidence warning** — only when sourcing is genuinely uncertain
 
-### Step 3 — Upload Knowledge Files
-Upload these five files to the Project's Knowledge panel:
-
-1. `knowledge/01-youtube-sourcing-database.md`
-2. `knowledge/02-search-query-engineering.md`
-3. `knowledge/03-google-image-protocols.md`
-4. `knowledge/04-visual-grammar-reference.md`
-5. `knowledge/05-genre-playbooks.md`
-
-### Step 4 — Prepare Your Script
-
-Follow the format in `SCRIPT_INPUT_TEMPLATE.md`. The 5 things that maximize output quality:
-
-- Title
-- Target video length (minutes)
-- Target channel / style reference (1-2 YouTube channels whose editing you want to emulate)
-- Aesthetic direction (cinematic / comic book / retro / clean explainer / etc.)
-- The full script with section headers
-
-### Step 5 — Paste script → receive deep analysis → send sections one by one
+That's it. No "emotional function" padding. No "color grade" per line. Lean, actionable, editor-ready.
 
 ---
 
-## WORKFLOW
+## WHY THIS BEATS A BASIC GEM / GPT
 
-```
-[You paste title + full script]
-       ↓
-[Claude: Script Received + Deep Analysis]
-       ↓
-[You: "Proceed with SECTION 1" or paste a paragraph]
-       ↓
-[Claude: Paragraph-by-paragraph breakdown with all asset sources]
-       ↓
-[Repeat per section / paragraph]
-```
-
----
-
-## WHY THIS BEATS A GENERIC GEM
-
-| Gemini Gem (basic) | Visual Architect (this project) |
+| Basic Gem / GPT setup | CLIP HUNTER |
 |---|---|
-| Line-by-line (loses paragraph context) | Paragraph-level by default, preserves story beat |
-| Generic search terms | 4+ ranked, editor-grade queries per line |
-| No Google Image search | Separate image-sourcing pipeline |
+| Guesses URLs from memory | Uses web search for every line (when available) |
+| Verbose — 40+ lines per script line | Lean — 6–8 lines per script line |
 | Defaults to green screen | Green screen requires justification |
-| No confidence signal | Explicit 🟢🟡🔴 confidence rating per asset |
-| No canonical scene DB | References episode + approximate timestamp for famous content |
-| No vibe lock | Locks aesthetic prescription before breakdown |
-| Fabricates sources | Honest about training cutoff and search-only mode |
+| One-size-fits-all search | Niche-specific playbook (anime ≠ history ≠ game) |
+| No confidence signal | Flags only when sourcing is genuinely low-confidence |
+| Locks to one platform | Same prompt works on Claude, ChatGPT, Gemini, Grok |
 
 ---
 
-## HONEST LIMITATIONS
+## SETUP — 3 MINUTES
 
-- Claude cannot browse YouTube live (unless your Claude plan has web search enabled in Projects).
-- For canonical popular content (top ~1000 films, top shows, AAA games), episode + approximate timestamp references are reliable.
-- For obscure / recent / niche content, you get search-term strategy only — no fabricated URLs.
-- Always treat timestamps as approximate — verify before cutting.
+### For ChatGPT Custom GPT
+1. Go to ChatGPT → Explore GPTs → Create
+2. Paste `PROJECT_INSTRUCTIONS.md` into the "Instructions" field
+3. Upload the 5 knowledge files (see below) under "Knowledge"
+4. **Enable "Web Browsing"** capability — critical for URL verification
+5. Save
+
+### For Claude Projects
+1. Go to claude.ai → Projects → Create Project
+2. Paste `PROJECT_INSTRUCTIONS.md` into the "Custom instructions" field
+3. Upload the 5 knowledge files under "Project knowledge"
+4. **Enable "Web search"** in project settings (paid plans)
+5. Save
+
+### For Gemini Gems
+1. Go to gemini.google.com → Gems → Create new Gem
+2. Paste `PROJECT_INSTRUCTIONS.md` into the "Instructions" field
+3. Upload the 5 knowledge files under "Knowledge"
+4. Web grounding is on by default
+5. Save
+
+### For Grok Projects (X Premium)
+1. Create a new Project in Grok
+2. Paste `PROJECT_INSTRUCTIONS.md` into project instructions
+3. Add knowledge files as attachments
+4. Grok's real-time search is on by default — this is where Grok shines
+5. Save
+
+---
+
+## KNOWLEDGE FILES TO UPLOAD
+
+```
+knowledge/01-youtube-sourcing-database.md    (channels by niche — films, games, anime, docs, etc.)
+knowledge/02-search-query-engineering.md     (how to build queries that land the clip)
+knowledge/03-google-image-protocols.md       (image search recipes + filter discipline)
+knowledge/04-visual-grammar-reference.md     (cinematography vocab — for context only)
+knowledge/05-genre-playbooks.md              (per-niche sourcing protocols)
+```
+
+---
+
+## USAGE FLOW
+
+```
+1. You paste TITLE + NICHE + VIBE + REFERENCE CHANNELS + full script
+       ↓
+2. AI locks context (one short block, no breakdown)
+       ↓
+3. You send a paragraph OR say "Proceed with SECTION X"
+       ↓
+4. AI returns line-by-line breakdown with YouTube URLs + image queries
+       ↓
+5. Your editor clicks the URLs, jumps to the timestamps, starts cutting.
+```
+
+See `SCRIPT_INPUT_TEMPLATE.md` for the exact input format.
+See `EXAMPLE_OUTPUT.md` for what output looks like at target quality.
+
+---
+
+## THE URL QUESTION — HONEST ANSWER
+
+- **Grok (X Premium):** Has live real-time search baked in. Returns real URLs + timestamps reliably. Best platform for this project.
+- **ChatGPT (with Browsing enabled):** Returns real URLs via browser tool. Reliable.
+- **Gemini (grounding on):** Returns real URLs via search grounding. Reliable.
+- **Claude (web search enabled):** Returns real URLs. Reliable on paid plans.
+- **Without any web search:** Falls back to canonical scene references (Show S4E13 ~38:00) + precise search queries. Still useful, just not clickable.
+
+The instructions explicitly tell the AI: **never fabricate URLs.** If web search is off or uncertain, it returns search queries instead of made-up links.
 
 ---
 
@@ -99,14 +114,20 @@ Follow the format in `SCRIPT_INPUT_TEMPLATE.md`. The 5 things that maximize outp
 
 ```
 claude-project-visual-architect/
-├── README.md                                 (this file)
-├── PROJECT_INSTRUCTIONS.md                   (paste into Claude Project custom instructions)
-├── SCRIPT_INPUT_TEMPLATE.md                  (how to format scripts you send)
-├── EXAMPLE_OUTPUT.md                         (example of what output looks like)
+├── README.md                             (this file)
+├── PROJECT_INSTRUCTIONS.md               (paste into system instructions — works on all 4 platforms)
+├── SCRIPT_INPUT_TEMPLATE.md              (how to format scripts you send)
+├── EXAMPLE_OUTPUT.md                     (benchmark for what pro-grade output looks like)
 └── knowledge/
-    ├── 01-youtube-sourcing-database.md       (channels + ecosystems by content type)
-    ├── 02-search-query-engineering.md        (how to construct precise queries)
-    ├── 03-google-image-protocols.md          (image search patterns)
-    ├── 04-visual-grammar-reference.md        (cinematography + editing vocabulary)
-    └── 05-genre-playbooks.md                 (per-genre sourcing protocols)
+    ├── 01-youtube-sourcing-database.md
+    ├── 02-search-query-engineering.md
+    ├── 03-google-image-protocols.md
+    ├── 04-visual-grammar-reference.md
+    └── 05-genre-playbooks.md
 ```
+
+---
+
+## FOLDER NAME NOTE
+
+The folder is named `claude-project-visual-architect/` for historical reasons, but the content is fully platform-agnostic. Rename it if you prefer — nothing inside depends on the folder name.

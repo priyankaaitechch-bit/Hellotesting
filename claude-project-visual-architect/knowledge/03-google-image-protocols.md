@@ -1,223 +1,82 @@
-# GOOGLE IMAGE SEARCH PROTOCOLS
+# 03 — GOOGLE IMAGE PROTOCOLS
 
-Stills and static images are a first-class asset class for video essays. They're used for quote cards, chapter inserts, comic-panel frames, cutaway stills, reference inserts, and moments when a video clip is unavailable.
-
-This file contains the query patterns and filter discipline required to land the exact image on the first page of results.
+How CLIP HUNTER builds the single `IMG:` line in each breakdown block. Keep it lean — one precise query per line.
 
 ---
 
-## WHY STILLS MATTER IN VIDEO ESSAYS
-
-Stills serve four distinct roles:
-
-1. **Punctuation frames** — hold on a single still for 2–4 seconds to let a line breathe
-2. **Typography beds** — the background behind an on-screen quote
-3. **Comic-panel inserts** — with borders + halftone overlay for stylized moments
-4. **Fallback for unavailable video** — when a scene clip can't be sourced, a sharp high-res still can carry the moment
-
----
-
-## THE IMAGE QUERY FORMULA
+## QUERY FORMULA
 
 ```
-[SUBJECT] + [SPECIFIC CONTEXT / SCENE] + [QUALITY SIGNAL] + [SOURCE HINT IF NEEDED]
+[SUBJECT] + [SPECIFIC CONTEXT] + [QUALITY SIGNAL]
 ```
 
-**Examples:**
-- Bad: `Gus Fring`
-- Editor-grade: `Gus Fring half face burned Face Off final scene still high resolution`
+Bad: `Gus Fring`
+Good: `Gus Fring Pollos Hermanos yellow shirt still high resolution`
 
 ---
 
-## GOOGLE IMAGE FILTERS YOU MUST USE
+## USER APPLIES THESE FILTERS (mention only if the query specifically needs them)
 
-After running the search, ALWAYS apply the filter chain:
+Google Images → Tools dropdown:
+- **Size → Large** — almost always; filters thumbnails
+- **Type → Photo** — for real photography/stills
+- **Type → Clip Art** — illustrations, logos, icons
+- **Color → Black and white** — noir/retro mood
+- **Color → Transparent** — logos as PNG
+- **Usage Rights → Creative Commons** — safer commercial use
 
-| Filter | When to use |
-|---|---|
-| **Tools → Size → Large** | Always — filters out small/thumbnail-only results |
-| **Tools → Type → Photo** | For real photography / film stills |
-| **Tools → Type → Clip Art** | For illustrations / icons / diagrams |
-| **Tools → Color → Black and white** | For noir / retro / investigative mood |
-| **Tools → Color → Transparent** | For logos / PNG assets |
-| **Tools → Usage Rights → Creative Commons licenses** | For safer commercial use |
-| **Tools → Time → Past year** | For recent events / post-training content |
+CLIP HUNTER mentions these filters only when they meaningfully narrow results. Default queries assume Size:Large is on.
 
 ---
 
 ## QUERY RECIPES BY USE CASE
 
-### Recipe 1 — Film / TV Still
-`[Film or Show Name] + [Character] + [specific scene] + still`
-
-Examples:
-- `Breaking Bad Gus Fring half burned face still high resolution`
-- `The Godfather Michael Corleone baptism still`
-- `No Country for Old Men Anton Chigurh coin toss still`
-
-### Recipe 2 — Character Press / Promo Image
-`[Character Name] + [Show/Film] + promo portrait`
-
-Examples:
-- `Tony Soprano HBO promo portrait high resolution`
-- `Heisenberg Walter White hat press still`
-
-### Recipe 3 — Historical Figure / Event
-`[Person or Event] + [Year] + photograph archival`
-
-Examples:
-- `Einstein tongue photograph 1951 archival`
-- `Apollo 11 moon landing Buzz Aldrin archival NASA`
-
-### Recipe 4 — Quote Card Background
-`[Subject] + close up dark cinematic background`
-
-Examples:
-- `Gus Fring close up face dark cinematic still`
-- `Don Draper silhouette office window`
-
-### Recipe 5 — Comic-Panel Style Frame
-`[Character] + comic book illustration + [mood]`
-
-Examples:
-- `Batman comic book illustration noir Frank Miller`
-- `Spider-Man comic book panel silver age`
-
-### Recipe 6 — Architectural / Location Reference
-`[Location or Building] + exterior wide shot photography`
-
-Examples:
-- `Pollos Hermanos restaurant Albuquerque exterior photograph`
-- `World Trade Center exterior 1995 photograph`
-
-### Recipe 7 — Abstract Concept Imagery
-`[Concept] + symbolic imagery + [aesthetic]`
-
-Examples:
-- `loneliness symbolic imagery cinematic dark`
-- `greed money pile symbolic photography`
-
-### Recipe 8 — Data / Chart / Infographic
-`[Topic] + chart infographic + [year]`
-
-Examples:
-- `2008 financial crisis S&P 500 chart infographic`
-- `smartphone adoption worldwide chart by year`
+| Use case | Query template |
+|---|---|
+| Film / TV still | `[Film/Show] [Character] [scene] still high resolution` |
+| Press / promo portrait | `[Character] [Show] promo portrait` |
+| Historical figure | `[Person] [Year] photograph archival` |
+| Quote card background | `[Subject] close up dark cinematic` |
+| Comic panel style | `[Character] comic book illustration [mood]` |
+| Location / architecture | `[Location] exterior wide photograph` |
+| Abstract concept | `[Concept] symbolic imagery cinematic` |
+| Data / chart | `[Topic] chart infographic [year]` |
 
 ---
 
-## PREFERRED IMAGE SOURCES BY TYPE
+## PREFERRED SOURCES BY NICHE
 
-### Film & TV stills
-- **IMDb** (scroll to Media → Photos tab for official stills)
-- **TMDB (themoviedb.org)** — excellent curated stills
-- **Film Grab (film-grab.com)** — curated cinematographer-quality frames
-- **EvanERichards.com** — DP-level frame breakdowns for major films
-- **Reddit r/MovieDetails** — screenshots with context
-- **FanArt.tv** — promotional stills + fan art
-
-### Video game stills
-- **Official press kits** — search `[Game Name] press kit`
-- **Steam store pages** (scroll to screenshots)
-- **MobyGames.com** — comprehensive screenshot archives
-- **DeviantArt** — fan art + game stills
-
-### Anime stills
-- **MyAnimeList (myanimelist.net)** — official promo images
-- **AniDB.net** — character databases
-- **Zerochan.net** — high-res anime art
-- **Pinterest** — massive aggregator (caveat: verify resolution)
-
-### Historical / archival photography
-- **Wikimedia Commons (commons.wikimedia.org)** — free, often high-res
-- **Library of Congress Digital Collections**
-- **U.S. National Archives**
-- **Getty Images** (paid, licensed)
-- **Associated Press Images** (paid)
-- **Bettmann Archive** (through Getty)
-- **archive.org** — massive mixed archive
-
-### Real people / journalism
-- **Getty Images** (paid)
-- **Reuters Pictures** (paid)
-- **AP Images** (paid)
-- **Wikipedia** (for public domain portraits)
-
-### Free / CC-licensed photography
-- **Unsplash.com**
-- **Pexels.com**
-- **Pixabay.com**
-- **Wikimedia Commons**
-- **Flickr Creative Commons** (filter by CC license)
+| Niche | Best sources |
+|---|---|
+| Film / TV | IMDb media, TMDB, Film Grab, EvanERichards, Reddit r/MovieDetails |
+| Games | Steam store, MobyGames, press kits, ArtStation |
+| Anime | MyAnimeList, AniDB, Zerochan, Pinterest |
+| Historical / real people | Wikimedia Commons, Library of Congress, Getty (paid), AP Images (paid) |
+| Cartoons | Fandom wikis (per show), DeviantArt, official press kits |
+| Free CC photography | Unsplash, Pexels, Pixabay, Wikimedia Commons, Flickr CC filter |
 
 ---
 
-## ADVANCED — REVERSE IMAGE SEARCH
+## REVERSE IMAGE SEARCH (for hard cases)
 
-When you need a specific frame but don't know where it's from, or when you need higher-res versions of a known image:
-
-1. **Google Lens / Google Images → "Search by image"** — paste a URL or upload the image
-2. **TinEye.com** — often finds higher-res versions of the same image
-3. **Yandex Images (yandex.com/images)** — often beats Google for niche content, especially for recognizing character screenshots
-4. **Bing Visual Search** — third option worth trying
-
-### Typical reverse search flow
-1. You have a low-res reference
-2. Run it through Yandex first (highest hit rate for media stills)
-3. Then Google Lens for context
-4. Then TinEye for exact duplicates at different resolutions
+When user has a low-res reference or can't find the origin:
+1. **Yandex Images** — best hit rate for media stills and screenshots
+2. **Google Lens** — for context + higher-res alternatives
+3. **TinEye** — for exact duplicates at different resolutions
 
 ---
 
-## RESOLUTION STANDARDS FOR VIDEO ESSAYS
+## RESOLUTION STANDARDS
 
-- **Minimum acceptable width for background use:** 1920px
-- **Minimum for full-screen display in 1080p video:** 1920 x 1080px
-- **Minimum for full-screen display in 4K video:** 3840 x 2160px
-- **For Ken Burns pan-and-zoom:** 2x target resolution (so 4K pan → 7680px source)
-
-If a source image is below target resolution, **note this in the breakdown** and suggest either:
-- AI upscaling (Topaz Gigapixel / Upscayl)
-- Use the image at partial-frame size (picture-in-picture)
-- Find an alternative
+- Full-frame in 1080p video: min 1920x1080
+- Full-frame in 4K video: min 3840x2160
+- Ken Burns pan: 2x target resolution
+- Under target? Suggest Topaz Gigapixel / Upscayl upscale, OR partial-frame (PiP) use
 
 ---
 
-## LICENSING QUICK REFERENCE
+## INTEGRATION RULE
 
-| Source | License | Safe for monetized YouTube? |
-|---|---|---|
-| Wikimedia Commons | Mostly CC-BY-SA or Public Domain | Yes (check individual image) |
-| Unsplash / Pexels / Pixabay | Custom permissive | Yes |
-| Film stills from IMDb | Promotional / fair use | Risky — better to use under commentary/criticism fair use |
-| Getty / AP / Reuters | Proprietary | No without license |
-| Reddit screenshots | Uploader's rights | Risky |
-| AI-generated (via Midjourney, DALL-E, SDXL) | Varies by platform ToS | Usually yes |
+Each breakdown block gets **one** IMG query. If the block genuinely needs two distinct images (e.g., split screen showing two things), that's a valid exception — give two, not more.
 
-For video essays using film/TV/game stills under fair use for criticism and commentary, most creators proceed — but this is the user's legal call, not yours.
-
----
-
-## INTEGRATION WITH BREAKDOWN OUTPUT
-
-Every breakdown block's 🖼️ SECONDARY ASSET section should contain:
-
-1. **3+ Google Image search queries** (editor-grade, using formulas above)
-2. **Explicit filter suggestions** (e.g., "Tools → Size: Large, Type: Photo")
-3. **Preferred source** (e.g., "Film Grab for Breaking Bad frames")
-4. **Fallback source** if primary search is empty
-
-Example of good secondary-asset output:
-
-```
-🖼️ SECONDARY ASSET — GOOGLE IMAGES / STILLS
-
-Google Images search terms:
-1. `Gus Fring half face burned still Face Off` — apply filter: Size: Large, Type: Photo
-2. `Gus Fring tie adjustment final scene still` — apply filter: Size: Large
-3. `Giancarlo Esposito Breaking Bad Face Off press still` — apply filter: Type: Photo
-
-Preferred image sources: Film Grab (film-grab.com) has curated Breaking Bad frames. Fallback: Reddit r/breakingbad top posts filtered by "final scene".
-
-Resolution check: Need minimum 1920px wide for full-frame use. If primary result is below this, upscale with Topaz Gigapixel.
-```
+If motion is the whole beat and no still applies, drop the IMG line entirely from that block.
